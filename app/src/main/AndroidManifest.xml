@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.inf.tdfc">
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_circler"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_round2"
+        android:supportsRtl="true"
+        android:theme="@style/AppFullScreenTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".uploadPres"
+            android:exported="false" />
+        <activity
+            android:name=".dialog_viewDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserLogin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TestEntry_b2b"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Signin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PrintPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MakePresNw"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Presdetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Viewpresdetails"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity
+            android:name=".Presclose"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Uploadpresimg"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoadPatientinfo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Testreview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Apptreview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TestBook"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity_test_section_hm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".testquote"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TestList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BookTest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientData"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Dashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+     <!--   <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+           -->
+        <provider
+            android:authorities="com.inf.tdfc.fileprovider"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+        <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path"/>
+    </provider>
+    </application>
+
+</manifest>

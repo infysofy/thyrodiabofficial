@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uploadPres">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/borderblue"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/borderblue"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="700dp"
+        android:background="@drawable/borderblue"
+        android:orientation="vertical">
+            <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <ImageView
+                    xmlns:custom="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/imagesView"
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp"
+                    android:layout_weight="1"/>
+
+            </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borderblue"
+        android:orientation="horizontal">
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                android:id="@+id/upld_pdf"
+                android:text="UPLOAD"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                android:id="@+id/nxt_img"
+                android:text="NEXT"/>
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+</RelativeLayout>

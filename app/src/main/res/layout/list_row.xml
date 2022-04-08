@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/borderblue">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/testname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TEST NAME"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mrp1"
+                android:layout_width=".50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="MRP:"
+                android:paddingLeft="5dp"
+                android:textColor="@color/red"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mrp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/code1"
+                android:layout_width=".50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Code:"
+                android:paddingLeft="5dp"
+                android:textColor="@color/red"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/code2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="14dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/rate1"
+                android:layout_width=".50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rate:"
+                android:paddingLeft="5dp"
+                android:textColor="@color/red"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/rate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text=""
+                android:textSize="14dp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/btn_lv_del_test"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@mipmap/trash"
+                android:paddingRight="10dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>
