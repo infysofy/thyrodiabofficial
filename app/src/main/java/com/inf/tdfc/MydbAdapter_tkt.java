@@ -1,7 +1,10 @@
 package com.inf.tdfc;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -145,6 +148,7 @@ public class MydbAdapter_tkt extends SQLiteOpenHelper
     }
     // Get User Details
 
+    @SuppressLint("Range")
     public ArrayList<HashMap<String, String>> GetTicket()    {
         SQLiteDatabase db = this.getWritableDatabase();
         ArrayList<HashMap<String, String>> userList = new ArrayList<>();
@@ -161,6 +165,7 @@ public class MydbAdapter_tkt extends SQLiteOpenHelper
         }
         return  userList;
     }
+    @SuppressLint("Range")
     public ArrayList<HashMap<String, String>> GetTicketsDirect(){
         SQLiteDatabase db = this.getWritableDatabase();
         ArrayList<HashMap<String, String>> userList = new ArrayList<>();
@@ -189,6 +194,7 @@ public class MydbAdapter_tkt extends SQLiteOpenHelper
         }
         return  userList;
     }
+    @SuppressLint("Range")
     public  String GetSpCode() {
         String r = "";
         String ids="";
@@ -219,6 +225,7 @@ public class MydbAdapter_tkt extends SQLiteOpenHelper
         }
         return ids;
     }
+    @SuppressLint("Range")
     public ArrayList<HashMap<String, String>> GetTicketId1(String Id){
         SQLiteDatabase db = this.getWritableDatabase();
         ArrayList<HashMap<String, String>> userList = new ArrayList<>();
@@ -239,6 +246,7 @@ public class MydbAdapter_tkt extends SQLiteOpenHelper
         }
         return  userList;
     }
+    @SuppressLint("Range")
     public ArrayList<HashMap<String, String>> GetUserDet(){
         SQLiteDatabase db = this.getWritableDatabase();
         ArrayList<HashMap<String, String>> userList = new ArrayList<>();
@@ -256,6 +264,7 @@ public class MydbAdapter_tkt extends SQLiteOpenHelper
         }
         return  userList;
     }
+    @SuppressLint("Range")
     public ArrayList<HashMap<String, String>> GetTicketId(String Id){
         SQLiteDatabase db = this.getWritableDatabase();
         ArrayList<HashMap<String, String>> userList = new ArrayList<>();
@@ -275,6 +284,7 @@ public class MydbAdapter_tkt extends SQLiteOpenHelper
         }
         return  userList;
     }
+    @SuppressLint("Range")
     public ArrayList<HashMap<String, String>> GetImage(String Id){
         SQLiteDatabase db = this.getWritableDatabase();
         ArrayList<HashMap<String, String>> userList = new ArrayList<>();
@@ -308,6 +318,7 @@ public class MydbAdapter_tkt extends SQLiteOpenHelper
         // returning lables
         return labels;
     }
+    @SuppressLint("Range")
     public ArrayList<String> getAllTableName(){
         SQLiteDatabase db = this.getWritableDatabase();
         ArrayList<String> allTableNames=new ArrayList<String>();
