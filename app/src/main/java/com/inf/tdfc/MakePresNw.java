@@ -198,7 +198,7 @@ public class MakePresNw extends AppCompatActivity {
 
             }
         });
-    btnupdate.setOnClickListener(new View.OnClickListener() {
+        btnupdate.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
 
@@ -236,7 +236,6 @@ public class MakePresNw extends AppCompatActivity {
         }
         }
     });
-
         actv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long rowId) {
                 String selection = (String) parent.getItemAtPosition(position);
