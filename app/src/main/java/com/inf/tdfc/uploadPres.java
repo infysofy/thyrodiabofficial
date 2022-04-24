@@ -223,8 +223,8 @@ public class uploadPres extends AppCompatActivity {
             cb.rectangle(10, 675, 550, 55);
 
             //Clinical Interpretation Section
-            createHeadings(cb, 10, 665, "Clinical Interpretation:");
-            createHeadings(cb, 10, 655, "" +
+            createHeadings(cb, 15, 665, "Clinical Interpretation:");
+            createHeadings(cb, 20, 655, "" +
                     " BP:-->120/80\n" +
                     "Pulse:-->120\n" +
                     "Random Blood Sugar:-->154mg/dL\n" +
@@ -234,7 +234,24 @@ public class uploadPres extends AppCompatActivity {
             cb.rectangle(10, 645, 550, 30);
 
             //INVOICE SECTION
-        cb.rectangle(10, 630, 550, 10);
+        cb.rectangle(10, 615, 550, 30);
+        createHeadings(cb, 15, 637, "#");
+        createHeadings(cb, 250, 637, "Particulars");
+        createHeadings(cb, 500, 637, "Rate(₹)");
+
+        createHeadings(cb, 15, 623, "1");
+        createHeadings(cb, 150, 623, "DOCTOR CONSULTATION - DR ABHISEKH BHATTACHARYYA ");
+        createHeadings(cb, 500, 623, "₹ 500.00");
+
+        //LINE SECTION INVOICE
+        cb.moveTo(10, 632);
+        cb.lineTo(555, 632);
+        cb.moveTo(25, 615);
+        cb.lineTo(25, 645);
+        cb.moveTo(495, 615);
+        cb.lineTo(495, 645);
+
+        cb.stroke();
 /*
             // Invoice Detail box layout
             cb.rectangle(20,50,550,600);
@@ -248,7 +265,7 @@ public class uploadPres extends AppCompatActivity {
             cb.lineTo(430,650);
             //cb.moveTo(500,50);
             //cb.lineTo(500,650);
-            cb.stroke();
+
 
             // Invoice Detail box Text Headings
             createHeadings(cb,22,633,"#");
