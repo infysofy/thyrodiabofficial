@@ -193,14 +193,12 @@ public class uploadPres extends AppCompatActivity {
     }
     private void generateLayout(Document doc, PdfContentByte cb) {
 
-
-
             cb.setLineWidth(1f);
             cb.rectangle(220, 800, 150, 15);
             createHeadings(cb, 230, 805, "Tax Invoice | Clinical Interpretation");
 
             createHeadings(cb, 260, 777, "MBODYMENT");
-            createHeadings2(cb, 220, 765, " THYRODIAB CLINIC");
+            createHeadings2(cb, 220, 760, " THYRODIAB CLINIC");
             createHeadings(cb, 200, 750, "10A Mohendra Bagchi Road,Bally,Howrah-711202");
             createHeadings(cb, 190, 742, "Email : thyrodiab@gmail.com | Web : www.thyrodiab.in");
             createHeadings(cb, 215, 734, "Contact No : +91 98309 88233 | 90380 03788");
@@ -251,82 +249,21 @@ public class uploadPres extends AppCompatActivity {
         cb.moveTo(495, 615);
         cb.lineTo(495, 645);
 
+        cb.rectangle(10, 585, 550, 30);
+        createHeadings(cb, 20, 605, "Remarks:");
+
+        cb.rectangle(10, 565, 550, 20);
+        createHeadings(cb, 20, 570, "Next Review Date : 01/07/2022");
+        createHeadings(cb, 400, 570, "Next Test Date : 16/06/2022");
         cb.stroke();
-/*
-            // Invoice Detail box layout
-            cb.rectangle(20,50,550,600);
-            cb.moveTo(20,630);
-            cb.lineTo(570,630);
-            cb.moveTo(50,50);
-            //cb.lineTo(50,650);
-            //cb.moveTo(150,50);
-            cb.lineTo(150,650);
-            cb.moveTo(430,50);
-            cb.lineTo(430,650);
-            //cb.moveTo(500,50);
-            //cb.lineTo(500,650);
+        createContent(cb,10,250,"Test",PdfContentByte.ALIGN_CENTER);
+    }
 
-
-            // Invoice Detail box Text Headings
-            createHeadings(cb,22,633,"#");
-           // createHeadings(cb,52,633,"Item Number");
-            createHeadings(cb,152,633,"Paticulars");
-            createHeadings(cb,432,633,"Price");
-           // createHeadings(cb,502,633,"Ext Price");
-
-            //add the images
-            Image companyLogo = Image.getInstance("images/olympics_logo.gif");
-            companyLogo.setAbsolutePosition(25,700);
-            companyLogo.scalePercent(25);
-            doc.add(companyLogo);
-*/
+    private void generatePrescription(Document doc, PdfContentByte cb)  {
 
 
     }
 
-    private void generateHeader(Document doc, PdfContentByte cb)  {
-
-        try {
-
-            createHeadings(cb,200,750,"Company Name");
-            createHeadings(cb,200,735,"Address Line 1");
-            createHeadings(cb,200,720,"Address Line 2");
-            createHeadings(cb,200,705,"City, State - ZipCode");
-            createHeadings(cb,200,690,"Country");
-
-            createHeadings(cb,482,743,"ABC0001");
-            createHeadings(cb,482,723,"123456");
-            createHeadings(cb,482,703,"09/26/2012");
-
-        }
-
-        catch (Exception ex){
-            ex.printStackTrace();
-        }
-
-    }
-
-    private void generateDetail(Document doc, PdfContentByte cb, int index, int y)  {
-        DecimalFormat df = new DecimalFormat("0.00");
-
-        try {
-
-            createContent(cb,48,y,String.valueOf(index+1),PdfContentByte.ALIGN_RIGHT);
-            createContent(cb,52,y, "ITEM" + String.valueOf(index+1),PdfContentByte.ALIGN_LEFT);
-            createContent(cb,152,y, "Product Description - SIZE " + String.valueOf(index+1),PdfContentByte.ALIGN_LEFT);
-
-            double price = Double.valueOf(df.format(Math.random() * 10));
-            double extPrice = price * (index+1) ;
-            createContent(cb,498,y, df.format(price),PdfContentByte.ALIGN_RIGHT);
-            createContent(cb,568,y, df.format(extPrice),PdfContentByte.ALIGN_RIGHT);
-
-        }
-
-        catch (Exception ex){
-            ex.printStackTrace();
-        }
-
-    }
 
     private void createHeadings(PdfContentByte cb, float x, float y, String text){
         cb.beginText();
